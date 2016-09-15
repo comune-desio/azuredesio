@@ -22,6 +22,15 @@
 //  \\u2744 neve
   
   switch ($icon) {
+    case "clear":
+      $icont="\\u2600";
+      break;
+    case "sunny":
+      $icont="\\u2600";
+      break;
+    case "cloudy":
+      $icont="\\u2601";
+      break;
     case "rain":
       $icont="\\u2614";
       break;
