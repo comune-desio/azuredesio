@@ -20,7 +20,7 @@
       $icont=":partly_sunny:";
       break;
   }
-  echo utf8_encode('Condizioni: '.$condizione." ".$icont."\r\n");
+  echo 'Condizioni: '.$condizione." ".utf8_encode($icont)."\r\n";
   echo 'Temperatura: '.$temp."° C\r\n";
   echo 'Umidità: '.$umidita."\r\n";
 ?>
