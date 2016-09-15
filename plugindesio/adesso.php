@@ -16,10 +16,10 @@
   
   switch ($icon) {
     case "rain":
-      $icont="\\u2614";
+      $icont="\\\\u2614";
       break;
     case "partlycloudy":
-      $icont="\\u26c5";
+      $icont="\\\\u26c5";
       break;
   }
   echo 'Condizioni: '.$condizione." ".utf8_encode($icont)."\r\n";
