@@ -18,5 +18,5 @@
   }
   echo 'Condizioni: '.$condizione." ".$icont."\r\n";
   echo 'Temperatura: '.$temp." C\r\n";
-  echo 'Umidita'': '.$umidita."\r\n";
+  echo 'Umidita\': '.$umidita."\r\n";
 ?>
