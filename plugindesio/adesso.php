@@ -6,12 +6,20 @@
   $temp= $json['current_observation']['temp_c'];
   $umidita=$json['current_observation']['relative_humidity'];
   $icon=$json['current_observation']['icon'];
+  
+//  \\u2600 sole
+//  \\u26c5 parzialmente nuvoloso
+//  \\u2601 nuvoloso
+//  \\u26a1 temporale
+//  \\u2614 pioggia
+//  \\u2744 neve
+  
   switch ($icon) {
     case "rain":
-      $icont=":umbrella:";
+      $icont="\\u2614";
       break;
     case "partlycloudy":
-      $icont=":partly_sunny:";
+      $icont="\\u26c5";
       break;
   }
   echo 'Condizioni: '.$condizione." ".utf8_encode($icont)."\r\n";
