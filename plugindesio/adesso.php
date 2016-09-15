@@ -16,12 +16,14 @@
   
   switch ($icon) {
     case "rain":
-      $icont="\\\\u2614";
+      $icont="\u2614";
       break;
     case "partlycloudy":
-      $icont="\\\\u26c5";
+      $icont="\u26c5";
       break;
   }
+  
+  $icont = preg_replace("/\\\\u([0-9a-fA-F]{4})/e", "iconv('UCS-4LE','UTF-8',pack('V', hexdec('U$1')))", $icont);
   echo 'Condizioni: '.$condizione." ".utf8_encode($icont)."\r\n";
   echo 'Temperatura: '.$temp." C\r\n";
   echo 'Umidita\': '.$umidita."\r\n";
