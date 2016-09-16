@@ -27,7 +27,7 @@
     "sunny" => $unicode_mapping["sole"],
     "cloudy" => $unicode_mapping["nuvoloso"],
     "rain" => $unicode_mapping["pioggia"],
-    "partlycloudy" => $unicode_mapping["parzalmente nuvoloso"]
+    "partlycloudy" => $unicode_mapping["parzialmente nuvoloso"]
   ];
   $icont = $icon_mapping[$icon];
   // TODO: handle when $icon is not a valid key
