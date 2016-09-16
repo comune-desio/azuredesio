@@ -32,7 +32,7 @@
   $icont = $icon_mapping[$icon];
   // TODO: handle when $icon is not a valid key
 
-   $icont = preg_replace("/\\\\u([0-9a-fA-F]{4})/e", "iconv('UCS-4LE','UTF-8',pack('V', hexdec('U$1')))", $icont);
+  $icont = preg_replace("/\\\\u([0-9a-fA-F]{4})/e", "iconv('UCS-4LE','UTF-8',pack('V', hexdec('U$1')))", $icont);
 
   echo "Condizioni: ${condizione} ${icont}\r\n";
   echo "Temperatura: ${temp}° C\r\n";
