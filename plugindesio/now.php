@@ -15,24 +15,25 @@
 
 
   $unicode_mapping = [
-    "sole" => "\\u2600",
-    "parzialmente nuvoloso" => "\\u26c5",
-    "nuvoloso" => "\\u2601",
-    "temporale" => "\\u26a1",
-    "pioggia" => "\\u2614",
-    "neve" => "\\u2744"
+    "sole" => ":sunny:",
+    "parzialmente nuvoloso" => ":partly_sunny:",
+    "nuvoloso" => ":cloud:",
+    "temporale" => ":zap:",
+    "pioggia" => ":umbrella:",
+    "neve" => ":snowflake:"
   ];
   $icon_mapping = [
     "clear" => $unicode_mapping["sole"],
     "sunny" => $unicode_mapping["sole"],
     "cloudy" => $unicode_mapping["nuvoloso"],
     "rain" => $unicode_mapping["pioggia"],
-    "partlycloudy" => $unicode_mapping["parzialmente nuvoloso"]
+    "partlycloudy" => $unicode_mapping["parzialmente nuvoloso"],
+    "mostlycloudy" => $unicode_mapping["parzialmente nuvoloso"]
   ];
   $icont = $icon_mapping[$icon];
   // TODO: handle when $icon is not a valid key
 
-  $icont = preg_replace("/\\\\u([0-9a-fA-F]{4})/e", "iconv('UCS-4LE','UTF-8',pack('V', hexdec('U$1')))", $icont);
+ // $icont = preg_replace("/\\\\u([0-9a-fA-F]{4})/e", "iconv('UCS-4LE','UTF-8',pack('V', hexdec('U$1')))", $icont);
 
   echo "Condizioni: ${condizione} ${icont}\r\n";
   echo "Temperatura: ${temp}° C\r\n";
